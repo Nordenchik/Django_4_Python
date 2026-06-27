@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from my_app.views import room_details
+from my_app.views import rooms_list, room_details
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rooms/', room_details, name='room_details'),
+    path('rooms/', rooms_list, name='rooms_list'),
+    path('rooms/<int:room_id>/', room_details, name='room_details'),
 ]
