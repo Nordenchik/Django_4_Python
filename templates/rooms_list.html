@@ -4,16 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rooms list</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
         <header>
-            <h1>Список кімнат</h1>
+            <h1 id="arial">Список кімнат</h1>
         </header>
         <main>
             <ul>
-                {{% for room in Rooms.rooms %}}
-                    <li>Номер кімнати - {{ room.id }}</li>
-                {{% endfor %}}
+                {% for room in rooms %}
+                    <li>{{ room.id }}, {{ room.name }}</li>
+                {% endfor %}
             </ul>
         </main>
     </body>

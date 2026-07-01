@@ -16,8 +16,8 @@ class Booking(models.Model):
     def __str__(self): return f"Букінг для {self.user.username} - {self.date} о {self.time}"
 
 class Rooms(models.Model):
-    rooms = []
     name = models.CharField(max_length=100)
     capacity = models.PositiveIntegerField()
+    reservered = models.BooleanField(default=False)
 
     def __str__(self): return self.name
