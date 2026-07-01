@@ -1,0 +1,9 @@
+#arial {
+    font-family: 'arial';
+}
+
+.elements-center {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
