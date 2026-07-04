@@ -9,12 +9,12 @@
     </head>
     <body>
         <header>
-            <h1 id="arial">Список кімнат</h1>
+            <h1 id="arial" style="text-align: center;">Список кімнат</h1>
         </header>
         <main>
             <ul>
                 {% for room in rooms %}
-                    <li>{{ room.id }}, {{ room.name }}</li>
+                    <li>{{ room.id }}, {{ room.name }}, {{ room.capacity }} - {{ room.registered }}</li>
                 {% endfor %}
             </ul>
         </main>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DJBooking</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <div class="container elements-center" id="arial">
+            <h1>Ласкаво просимо в DJBooking, {{ user.username }}!</h1>
+            <div class="links">
+                <a href="/Django_4_Python/templates/rooms_list.html">Список кімнат</a>
+                <a href="/Django_4_Python/templates/room_details.html">Деталі заброньованої кімнати</a>
+                <a href="/Django_4_Python/templates/client_details.html">Деталі про вас</a>
+                <a href="{% url 'logout' %}">Вийти</a>
+            </div>
+        </div>
+    </body>
+</html>
